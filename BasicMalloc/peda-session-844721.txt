@@ -1,0 +1,7 @@
+break advancedtest.c:62
+break advancedtest.c:71
+break newtest.cpp:47
+break overrun.c:39
+break overrun.c:88
+
+set exec-wrapper logging enabled
