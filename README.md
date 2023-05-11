@@ -11,7 +11,10 @@ Freeing a block of memory that we allocated using malloc, calloc on it. It is al
 The calloc() function allocates memory for the required size and returns a pointer to the allocated memory.  The memory is set to zero.  If nmemb or size is 0,  then  calloc()  returns
 
 ## New (operator)
-To be ADDED
+It allocates memory for an object on the heap py passing the size of the object to malloc that does the dynamic memory allocation and returns the pointer the memory block, if it fails then we return a nullptr back or we throw and exception std::bad_alloc.
 
 ## Delete (operator)
-To be ADDED
+It frees the memory block we allocated using the new operator, so basically in this implementation it is simplly a call to free(ptr) on the pointer.
+
+### Note
+This implementation is not optimal and might not be covering all edge cases. It is also not meant to be thread safe.
